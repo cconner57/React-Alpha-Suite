@@ -1,0 +1,41 @@
+.NavContainer {
+	min-width: 18vw;
+	height: 100vh;
+	color: #1a1926;
+	display: flex;
+	flex-direction: column;
+	border-right: 1px solid #e3e5e8;
+}
+
+.NavItem {
+	display: flex;
+	align-items: center;
+	height: 3.5rem;
+	margin: .25rem 2rem;
+	border-radius: 16px;
+	transition: all 0.2s ease-in-out;
+	text-decoration: none;
+	color: #000;
+}
+
+.NavItem:hover {
+	background-color: rgba(26, 142, 255, 0.1);
+	border-radius: 16px;
+	cursor: pointer;
+	color: #2d99ff;
+}
+
+.active {
+	background-color: rgba(26, 142, 255, 0.1);
+	color: #2d99ff;
+}
+
+img {
+	width: auto;
+	height: 20px;
+	margin: 0 1rem;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+}
