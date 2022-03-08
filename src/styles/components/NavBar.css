@@ -1,26 +1,59 @@
 .NavContainer {
-	min-width: 18vw;
+	max-width: 5vw;
+	min-width: 5vw;
 	height: 100vh;
 	color: #1a1926;
+	padding: 1rem 1rem;
 	display: flex;
 	flex-direction: column;
 	border-right: 1px solid #e3e5e8;
+	overflow: hidden;
+	transition: all 0.3s linear;
 }
 
 .NavItem {
 	display: flex;
 	align-items: center;
-	height: 3.5rem;
-	margin: .25rem 2rem;
+	height: 3rem;
+	min-width: 2.75rem;
+	max-width: 2.75rem;
+	margin: 0.25rem 0;
+	padding: 0 0.75rem;
 	border-radius: 16px;
-	transition: all 0.2s ease-in-out;
 	text-decoration: none;
 	color: #000;
+	overflow: hidden;
+	transition: all 0.3s linear;
+}
+
+.NavItem img {
+	height: 20px;
+	min-width: 20px;
+}
+
+.NavItem p {
+	height: 1.3rem;
+	margin-left: 1rem;
+	overflow: hidden;
+}
+
+.NavContainer:hover {
+	min-width: 13vw;
+}
+
+.NavContainer:hover img {
+	width: auto;
+	height: 20px;
+}
+
+.NavContainer:hover .NavItem {
+	border-radius: 16px;
+	min-width: 10rem;
+	max-width: 10rem;
 }
 
 .NavItem:hover {
 	background-color: rgba(26, 142, 255, 0.1);
-	border-radius: 16px;
 	cursor: pointer;
 	color: #2d99ff;
 }
@@ -28,14 +61,57 @@
 .active {
 	background-color: rgba(26, 142, 255, 0.1);
 	color: #2d99ff;
+	transition: all 0.3s linear;
 }
 
-img {
-	width: auto;
-	height: 20px;
-	margin: 0 1rem;
+.CalendarItems {
+	margin-top: 20px;
+	max-height: 14rem;
+	min-height: 14rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	outline: 1px solid red;
 }
 
-p {
-	font-family: 'Roboto', sans-serif;
+/* .CalendarItems:hover {
+	display: flex;
+	justify-content: space-between;
+} */
+
+.NavContainer .CalendarHeader {
+	/* display: none; */
+	/* height: 0rem; */
+	transform: translateY(-50%);
+}
+
+.NavContainer:hover .CalendarHeader {
+	/* display: inline-block; */
+	transform: translateY(0%);
+	/* height: 1rem; */
+}
+
+.NavContainer:hover .CalendarFilterItem {
+	/* margin-top: 1rem; */
+}
+
+.NavContainer .CalendarFilterItem {
+	width: 0.75rem;
+	margin-bottom: 1rem;
+	/* margin-top: 0rem; */
+	transition: all 0.3s linear;
+}
+
+.CalendarFilterItem p {
+	display: none;
+}
+
+.dot {
+	max-width: 0.75rem;
+	height: 0.75rem;
+	border-radius: 50%;
+}
+
+.CalendarAddItem {
+	/* margin-left: .9rem; */
 }
