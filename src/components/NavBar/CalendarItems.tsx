@@ -3,7 +3,10 @@ import React from 'react';
 const CalendarItems = () => {
 	return (
 		<div className="CalendarItems">
-			<p className="CalendarHeader">Calendars</p>
+			<div className="CalendarHeader">
+				<p>Calendars</p>
+				<p className="CalendarAddItem">✚</p>
+			</div>
 			<div className="CalendarSubContainer">
 				<div className="CalendarFilterItem">
 					<div
@@ -51,7 +54,6 @@ const CalendarItems = () => {
 					<p>Other</p>
 				</div>
 			</div>
-			<p className="CalendarAddItem">✚</p>
 		</div>
 	);
 };

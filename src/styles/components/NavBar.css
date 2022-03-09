@@ -65,53 +65,58 @@
 }
 
 .CalendarItems {
-	margin-top: 20px;
-	max-height: 14rem;
-	min-height: 14rem;
+	max-height: 15rem;
+	min-height: 15rem;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	outline: 1px solid red;
+	overflow: hidden;
+	transition: all 0.3s linear;
 }
 
-/* .CalendarItems:hover {
-	display: flex;
-	justify-content: space-between;
-} */
+.NavContainer:hover .CalendarItems {
+	margin-top: 1rem;
+	max-height: 12.5rem;
+	min-height: 12.5rem;
+}
 
 .NavContainer .CalendarHeader {
-	/* display: none; */
-	/* height: 0rem; */
-	transform: translateY(-50%);
+	transition: all 0.3s linear;
+	margin-left: 2.8rem;
+	display: flex;
+	align-items: center;
 }
 
 .NavContainer:hover .CalendarHeader {
-	/* display: inline-block; */
-	transform: translateY(0%);
-	/* height: 1rem; */
+	margin-left: 1rem;
 }
 
-.NavContainer:hover .CalendarFilterItem {
-	/* margin-top: 1rem; */
+.NavContainer .CalendarHeader p:first-child {
+	font-size: 1.1rem;
+	/* font-weight: bold; */
+	color: #637085;
+}
+
+.CalendarHeader .CalendarAddItem {
+	margin-left: 1rem;
+	cursor: pointer;
 }
 
 .NavContainer .CalendarFilterItem {
-	width: 0.75rem;
-	margin-bottom: 1rem;
+	display: flex;
+	align-items: center;
+	margin-top: .6rem;
 	/* margin-top: 0rem; */
 	transition: all 0.3s linear;
 }
 
 .CalendarFilterItem p {
-	display: none;
+	margin-left: 1rem;
 }
 
 .dot {
+	min-width: 0.75rem;
 	max-width: 0.75rem;
 	height: 0.75rem;
 	border-radius: 50%;
-}
-
-.CalendarAddItem {
-	/* margin-left: .9rem; */
+	margin-left: 1rem;
 }
