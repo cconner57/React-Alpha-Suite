@@ -24,6 +24,8 @@
 	color: #000;
 	overflow: hidden;
 	transition: all 0.3s linear;
+	line-height: 20.46px;
+	font-size: 15px;
 }
 
 .NavItem img {
@@ -35,6 +37,8 @@
 	height: 1.3rem;
 	margin-left: 1rem;
 	overflow: hidden;
+	line-height: 20.46px;
+	font-size: 15px;
 }
 
 .NavContainer:hover {
