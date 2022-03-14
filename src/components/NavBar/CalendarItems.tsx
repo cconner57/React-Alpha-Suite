@@ -1,11 +1,19 @@
-import React from 'react';
-
 const CalendarItems = () => {
 	return (
 		<div className="CalendarItems">
 			<div className="CalendarHeader">
 				<p>Calendars</p>
-				<p className="CalendarAddItem">✚</p>
+				<img
+					className="CalendarAddItem"
+					style={{
+						fill: 'white',
+						height: '15px',
+						marginRight: '10px',
+						filter: 'brightness(0%)',
+					}}
+					src={process.env.PUBLIC_URL + '/assets/icons/plus.svg'}
+					alt="plus"
+				/>
 			</div>
 			<div className="CalendarSubContainer">
 				<div className="CalendarFilterItem">

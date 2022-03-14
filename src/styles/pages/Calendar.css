@@ -50,7 +50,7 @@
 .Month {
 	width: 93px;
 	border-radius: 12px;
-	padding: 10px 24px;
+	padding: 5px 24px;
 	cursor: pointer;
 	z-index: 2;
 	transition: color 0.3s ease-in-out;
@@ -86,8 +86,8 @@
 
 .DaysOfWeekContainer {
 	display: flex;
-	padding-top: 8px;
-	height: 37px;
+	padding-top: 4px;
+	height: 30px;
 }
 
 .DaysOfWeek {
@@ -102,10 +102,33 @@
 .DaysContainer {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
-	grid-template-rows: 1fr;
-	grid-gap: 1px;
+	grid-template-rows: repeat(5, 1fr);
 }
 
 .DaysItem {
-    border: 1px solid #e3e5e8;
+	border: 1px solid #e3e5e8;
+	min-height: 128px;
+	min-width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.DaysNumber {
+	text-align: center;
+	max-height: 36px;
+	min-width: 36px;
+	border-radius: 10px;
+	padding: 0.35rem;
+	margin: 5px;
+}
+
+.DaysNumberToday {
+	text-align: center;
+	max-height: 36px;
+	min-width: 36px;
+	border-radius: 10px;
+	padding: 0.35rem;
+	margin: 5px;
+	color: #fff;
+	background-color: #2d99ff;
 }
