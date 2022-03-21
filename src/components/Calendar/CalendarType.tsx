@@ -1,11 +1,11 @@
-import { MainViewProps } from 'interfaces';
+import { CalendarTypeProps } from 'interfaces';
 
-const MainView = ({
+const CalendarType = ({
 	selectedMonth,
 	selectedYear,
 	date,
 	calendarView,
-}: MainViewProps) => {
+}: CalendarTypeProps) => {
 	let daysOfMonth: any = [];
 	let firstDayofMonth = new Date(selectedYear, selectedMonth, 1);
 
@@ -72,4 +72,4 @@ const MainView = ({
 	return <>{renderCalendarView(calendarView)}</>;
 };
 
-export default MainView;
+export default CalendarType;

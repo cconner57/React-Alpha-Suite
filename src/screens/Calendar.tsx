@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from '../components/Calendar/Header';
 import DaysOfWeek from '../components/Calendar/DaysOfWeek';
-import MainView from '../components/Calendar/MainView';
+import CalendarType from '../components/Calendar/CalendarType';
 
 const Calendar = () => {
 	let date = new Date();
@@ -77,7 +77,7 @@ const Calendar = () => {
 					}}
 				/>
 				<DaysOfWeek calendarView={calendarView} date={date}/>
-				<MainView
+				<CalendarType
 					selectedMonth={selectedMonth}
 					selectedYear={selectedYear}
 					date={date}

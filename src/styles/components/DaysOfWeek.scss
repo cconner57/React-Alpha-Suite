@@ -1,0 +1,21 @@
+.DaysOfWeekContainer {
+	display: flex;
+	padding-top: 4px;
+	height: 30px;
+	.DaysOfWeek {
+		font-size: 13px;
+		text-transform: uppercase;
+		min-width: calc(100% / 7);
+		color: #637085;
+		text-align: center;
+		line-height: 18px;
+	}
+	.DayOfWeek {
+		font-size: 13px;
+		text-transform: uppercase;
+		min-width: 100%;
+		color: #637085;
+		text-align: center;
+		line-height: 18px;
+	}
+}

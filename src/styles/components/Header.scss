@@ -1,0 +1,113 @@
+.CalendarHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 25px 5px 25px;
+	.HeaderLeft {
+		display: flex;
+		.MonthChange {
+			display: flex;
+			min-width: 93px;
+			max-height: 48px;
+			background-color: #f5f7fa;
+			border-radius: 14px;
+			align-items: center;
+			justify-content: center;
+			margin-right: 1rem;
+			overflow: hidden;
+			.Chevron {
+				max-width: 45px;
+				max-height: 45px;
+				padding: 1rem;
+				margin: 5px 2px;
+				border-radius: 14px;
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+			}
+			.Divider {
+				min-width: 1px;
+				min-height: 24px;
+				background-color: #e3e5e8;
+			}
+			& img:hover {
+				background: #ffffff;
+				box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12),
+					0px 2px 1px rgba(0, 0, 0, 0.02);
+			}
+		}
+		.Today {
+			font-size: 15px;
+			max-height: 48px;
+			min-width: 48px;
+			background-color: #f5f7fa;
+			padding: 14px 24px;
+			border-radius: 14px;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				background: #ffffff;
+				box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12),
+					0px 2px 1px rgba(0, 0, 0, 0.02);
+			}
+		}
+	}
+	.HeaderMiddle {
+		display: flex;
+		align-items: baseline;
+		margin-left: 4rem;
+		.MonthView {
+			color: #1a1926;
+			font-size: 26px;
+			line-height: 35px;
+		}
+		.YearView {
+			margin-left: 6px;
+			color: #637085;
+			font-size: 18px;
+			line-height: 25px;
+		}
+	}
+	.HeaderRight {
+		display: flex;
+		align-items: center;
+		min-width: 265px;
+		min-height: 48px;
+		background-color: #f5f7fa;
+		border-radius: 12px;
+		position: relative;
+		.Month {
+			width: 93px;
+			border-radius: 12px;
+			padding: 5px 24px;
+			cursor: pointer;
+			z-index: 2;
+			transition: color 0.3s ease-in-out;
+		}
+		.Week {
+			width: 88px;
+			border-radius: 12px;
+			padding: 10px 24px;
+			cursor: pointer;
+			z-index: 2;
+			transition: color 0.3s ease-in-out;
+		}
+		.Day {
+			width: 76px;
+			border-radius: 12px;
+			padding: 10px 24px;
+			cursor: pointer;
+			z-index: 2;
+			transition: color 0.3s ease-in-out;
+		}
+		.Focus {
+			position: absolute;
+			z-index: 1;
+			background: linear-gradient(180deg, #ffffff 83.86%, #f5f6f7 100%);
+			border: 0.5px solid rgba(0, 0, 0, 0.03);
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12),
+				0px 2px 1px rgba(0, 0, 0, 0.02);
+			height: 44px;
+			transition: left 0.3s linear, width 0.3s linear;
+		}
+	}
+}

@@ -40,15 +40,8 @@ const Header = ({
 	};
 
 	return (
-		<div
-			className="CalendarHeader"
-			style={{
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'space-between',
-				padding: '15px 25px 5px 25px',
-			}}>
-			<div className="HeaderLeft" style={{ display: 'flex' }}>
+		<div className="CalendarHeader">
+			<div className="HeaderLeft">
 				<div className="MonthChange">
 					<img
 						className="Chevron"
@@ -81,38 +74,11 @@ const Header = ({
 					Today
 				</p>
 			</div>
-			<div
-				className="HeaderMiddle"
-				style={{ display: 'flex', alignItems: 'baseline', marginLeft: '4rem' }}>
-				<p
-					style={{
-						color: '#1a1926',
-						fontSize: '26px',
-						lineHeight: '35px',
-					}}>
-					{findMonth(selectedMonth)}
-				</p>
-				<p
-					style={{
-						marginLeft: '6px',
-						color: '#637085',
-						fontSize: '18px',
-						lineHeight: '25px',
-					}}>
-					{selectedYear}
-				</p>
+			<div className="HeaderMiddle">
+				<p className="MonthView">{findMonth(selectedMonth)}</p>
+				<p className="YearView">{selectedYear}</p>
 			</div>
-			<div
-				className="HeaderRight"
-				style={{
-					display: 'flex',
-					alignItems: 'center',
-					minWidth: '265px',
-					minHeight: '48px',
-					backgroundColor: '#f5f7fa',
-					borderRadius: '12px',
-					position: 'relative',
-				}}>
+			<div className="HeaderRight">
 				<div
 					className={`Focus ${calendarView}`}
 					style={

@@ -26,19 +26,7 @@ const DaysOfWeek = ({ calendarView, date }: DaysOfWeekProps) => {
 					</p>
 				));
 			case 'Day':
-				return (
-					<p
-						style={{
-							fontSize: '13px',
-							textTransform: 'uppercase',
-							minWidth: '100%',
-							color: '#637085',
-							textAlign: 'center',
-							lineHeight: '18px',
-						}}>
-						{daysOfWeek[date.getDay()].long}
-					</p>
-				);
+				return <p className="DayOfWeek">{daysOfWeek[date.getDay()].long}</p>;
 			default:
 				throw new Error('Unknown view');
 		}

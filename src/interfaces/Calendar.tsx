@@ -1,4 +1,4 @@
-export interface MainViewProps {
+export interface CalendarTypeProps {
 	selectedMonth: number;
 	selectedYear: number;
 	date: Date;
