@@ -7,6 +7,8 @@ const Calendar = () => {
 	let date = new Date();
 
 	const [calendarView, setCalendarView] = useState('Month');
+	const [selectedDay, setSelectedDay] = useState();
+	const [selectedWeek, setSelectedWeek] = useState();
 	const [selectedMonth, setSelectedMonth] = useState(date.getMonth());
 	const [selectedYear, setSelectedYear] = useState(date.getFullYear());
 
@@ -76,7 +78,7 @@ const Calendar = () => {
 						border: '1px solid #ebeef2',
 					}}
 				/>
-				<DaysOfWeek calendarView={calendarView} date={date}/>
+				<DaysOfWeek calendarView={calendarView} date={date} />
 				<CalendarType
 					selectedMonth={selectedMonth}
 					selectedYear={selectedYear}

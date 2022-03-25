@@ -9,7 +9,7 @@ const CalendarType = ({
 	let daysOfMonth: any = [];
 	let firstDayofMonth = new Date(selectedYear, selectedMonth, 1);
 
-	const fillEmpyDays = (firstDayofMonth: Date) => {
+	const fillEmptyDays = (firstDayofMonth: Date) => {
 		let emptyDays = firstDayofMonth.getDay();
 		for (let i = 0; i < emptyDays; i++) {
 			daysOfMonth.push('');
@@ -28,7 +28,7 @@ const CalendarType = ({
 			);
 			date.setDate(date.getDate() + 1);
 		}
-		let daysInMonth = fillEmpyDays(firstDayofMonth);
+		let daysInMonth = fillEmptyDays(firstDayofMonth);
 		daysInMonth.push(...days);
 
 		for (let i = daysInMonth.length; i < 35; i++) {
@@ -38,14 +38,41 @@ const CalendarType = ({
 		return daysInMonth;
 	};
 
+	const timeArray = [
+		'01:00',
+		'02:00',
+		'03:00',
+		'04:00',
+		'05:00',
+		'06:00',
+		'07:00',
+		'08:00',
+		'09:00',
+		'10:00',
+		'11:00',
+		'12:00',
+		'13:00',
+		'14:00',
+		'15:00',
+		'16:00',
+		'17:00',
+		'18:00',
+		'19:00',
+		'20:00',
+		'21:00',
+		'22:00',
+		'23:00',
+		'24:00',
+	];
+
 	const renderCalendarView = (view: string) => {
 		switch (view) {
 			case 'Month':
 				return (
-					<div className="DaysContainer">
+					<div className="MonthContainer">
 						{getDaysInMonth(selectedMonth, selectedYear).map(
 							(day: string, index: number) => (
-								<div className="DaysItem" key={index}>
+								<div className="MonthItem" key={index}>
 									<p
 										className={
 											date.getMonth() === selectedMonth &&
@@ -61,9 +88,29 @@ const CalendarType = ({
 					</div>
 				);
 			case 'Week':
-				return <></>;
+				return (
+					<div className="WeekContainer">
+						<div className="TimeSlotContainer">
+							{timeArray.map((time, index) => (
+								<p className="TimeSlot" key={index}>
+									{time}
+								</p>
+							))}
+						</div>
+						<div className="Week">
+							{[...Array(140)].map((t, index) => (
+								<div key={index} className="WeekItem">
+								</div>
+							))}
+						</div>
+					</div>
+				);
 			case 'Day':
-				return <></>;
+				return (
+					<div className="DayContainer">
+						<p>hello day</p>
+					</div>
+				);
 			default:
 				throw new Error('Unknown view');
 		}

@@ -1,3 +1,4 @@
+import { findMonth } from '../../utils/monthName';
 import { HeaderProps } from 'interfaces';
 
 const Header = ({
@@ -8,34 +9,13 @@ const Header = ({
 	calendarView,
 	setCalendarView,
 }: HeaderProps) => {
-	const findMonth = (month: number): string => {
-		switch (month) {
-			case 0:
-				return 'January';
-			case 1:
-				return 'February';
-			case 2:
-				return 'March';
-			case 3:
-				return 'April';
-			case 4:
-				return 'May';
-			case 5:
-				return 'June';
-			case 6:
-				return 'July';
-			case 7:
-				return 'August';
-			case 8:
-				return 'September';
-			case 9:
-				return 'October';
-			case 10:
-				return 'November';
-			case 11:
-				return 'December';
-			default:
-				throw new Error('Invalid month');
+	const decrementDate = () => {
+		if (calendarView === 'Day') {
+		} else if (calendarView === 'Week') {
+		} else if (calendarView === 'Month') {
+			selectedMonth === 0
+				? setSelectedMonth(11)
+				: setSelectedMonth(selectedMonth - 1);
 		}
 	};
 
@@ -47,11 +27,7 @@ const Header = ({
 						className="Chevron"
 						src={process.env.PUBLIC_URL + '/assets/icons/left-chevron.png'}
 						alt="previous month"
-						onClick={() =>
-							selectedMonth === 0
-								? setSelectedMonth(11)
-								: setSelectedMonth(selectedMonth - 1)
-						}
+						onClick={decrementDate}
 					/>
 					<div className="Divider" style={{ margin: '12px 1px' }} />
 					<img

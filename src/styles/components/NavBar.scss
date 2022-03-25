@@ -1,6 +1,6 @@
 .NavContainer {
-	max-width: 5vw;
-	min-width: 5vw;
+	max-width: 4.5vw;
+	min-width: 4.5vw;
 	height: 100vh;
 	color: #1a1926;
 	padding: 1rem 1rem;
@@ -26,28 +26,25 @@
 	transition: all 0.3s linear;
 	line-height: 20.46px;
 	font-size: 15px;
-}
-
-.NavItem img {
-	height: 20px;
-	min-width: 20px;
-}
-
-.NavItem p {
-	height: 1.3rem;
-	margin-left: 1rem;
-	overflow: hidden;
-	line-height: 20.46px;
-	font-size: 15px;
+	img {
+		height: 20px;
+		min-width: 20px;
+	}
+	p {
+		height: 1.3rem;
+		margin-left: 1rem;
+		overflow: hidden;
+		line-height: 20.46px;
+		font-size: 15px;
+	}
 }
 
 .NavContainer:hover {
 	min-width: 13vw;
-}
-
-.NavContainer:hover img {
-	width: auto;
-	height: 20px;
+	img {
+		width: auto;
+		height: 20px;
+	}
 }
 
 .NavContainer:hover .NavItem {
@@ -79,8 +76,8 @@
 
 .NavContainer:hover .CalendarItems {
 	margin-top: 1rem;
-	max-height: 12.5rem;
-	min-height: 12.5rem;
+	max-height: 15rem;
+	min-height: 15rem;
 }
 
 .NavContainer .CalendarHeader {
@@ -96,7 +93,6 @@
 
 .NavContainer .CalendarHeader p:first-child {
 	font-size: 1.1rem;
-	/* font-weight: bold; */
 	color: #637085;
 }
 
@@ -112,18 +108,18 @@
 	display: flex;
 	align-items: center;
 	margin-top: 0.6rem;
-	/* margin-top: 0rem; */
 	transition: all 0.3s linear;
 }
 
-.CalendarFilterItem p {
-	margin-left: 1rem;
-}
-
-.dot {
-	min-width: 0.75rem;
-	max-width: 0.75rem;
-	height: 0.75rem;
-	border-radius: 50%;
-	margin-left: 1rem;
+.CalendarFilterItem {
+	.dot {
+		min-width: 0.75rem;
+		max-width: 0.75rem;
+		height: 0.75rem;
+		border-radius: 50%;
+		margin-left: 1rem;
+	}
+	p {
+		margin-left: 1rem;
+	}
 }
